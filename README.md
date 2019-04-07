@@ -46,7 +46,16 @@ The app defines following CRUD APIs.
 
     GET /api/v1/users
     
-    POST /api/v1/users
+    POST /api/v1/users : payload 
+    
+    {
+
+    "firstName":"admin",
+    "lastName":"admin",
+    "createdBy":"admin",
+    "updatedBy":"admin",
+    "email":"email@email.com"
+    }
     
     GET /api/v1/users/{userId}
     
@@ -57,3 +66,13 @@ The app defines following CRUD APIs.
 You can find the tutorial for this application on my blog -
 
 <https://www.prathapgivantha.wordpress.com>
+
+
+run docker mysql :
+
+docker run --name mysql  -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_DATABASE=users_database  -p 3306:3306 -d mysql/mysql-server:5.7
+
+
+src :https://prathapgivantha.wordpress.com/2018/11/20/how-to-create-rest-api-with-spring-boot/
+
+https://github.com/givanthak/spring-boot-rest-api-tutorial
